@@ -1,0 +1,24 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MJApplitools/Examples.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MJApplitools/Examples/issues"
+  },
+  "homepage": "https://github.com/MJApplitools/Examples#readme",
+  "dependencies": {
+    "@applitools/eyes-cypress": "^3.34.1",
+    "cypress": "^12.17.1"
+  }
+}
