@@ -9,13 +9,13 @@ describe('Functionally Test Login', () => {
         cy.get('#username').type('user');
         cy.get('#log-in').click();
         // Assert Failure - missing username
-        cy.get('.loginForm_formAlert__XtoFi').should('have.text', 'Please enter a username');
+        cy.get('.loginForm_formAlert__XtoFi').should('have.text', 'Please enter a password');
 
         cy.get('#username').clear();
         cy.get('#password').type('password')
         cy.get('#log-in').click();
         // Assert Failure - missing password
-        cy.get('.loginForm_formAlert__XtoFi').should('have.text', 'Please enter a password');
+        cy.get('.loginForm_formAlert__XtoFi').should('have.text', 'Please enter a username');
 
         cy.get('#username').type('user');
         cy.get('#log-in').click();
