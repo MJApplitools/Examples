@@ -12,7 +12,7 @@ describe('Functionally Test Login', () => {
             .should('have.css', 'background', 'rgba(0, 0, 0, 0) linear-gradient(to right bottom, rgb(215, 187, 234), rgb(101, 168, 241)) repeat scroll 0% 0% / auto padding-box border-box');
 
         // Assert Form Header
-        cy.get('.loginForm_loginFormHeader__fiIRG').should('have.css', 'color', 'rgb(62, 75, 91)')
+        cy.get('.loginForm_loginFormHeader__fiIRG')
             .should('have.css', 'color', 'rgb(62, 75, 91)')
             .should('have.css', 'border-bottom', '1px solid rgba(0, 0, 0, 0.1)')
 
