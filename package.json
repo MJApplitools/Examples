@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MJApplitools/Examples.git"
@@ -20,5 +18,9 @@
   "dependencies": {
     "@applitools/eyes-cypress": "^3.34.1",
     "cypress": "^12.17.1"
+  },
+  "devDependencies": {
+    "@applitools/eyes-playwright": "^1.18.3",
+    "@playwright/test": "^1.37.0"
   }
 }
