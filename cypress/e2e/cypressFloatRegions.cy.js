@@ -7,7 +7,7 @@ describe('Test Bank App', () => {
     })
 
     it('should capture dashboard', () => {
-        cy.visit('http://localhost:3000/bank?floatRegion=true');
+        cy.visit('http://sandbox.applitools.com/bank?floatRegion=true');
 
         // Use CSS Selectors to specify match level regions
         cy.eyesCheckWindow({ 
