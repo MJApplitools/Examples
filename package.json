@@ -17,7 +17,10 @@
   "homepage": "https://github.com/MJApplitools/Examples#readme",
   "dependencies": {
     "@applitools/eyes-cypress": "^3.34.1",
-    "cypress": "^12.17.1"
+    "@applitools/eyes-selenium": "^4.67.5",
+    "cypress": "^12.17.1",
+    "mocha": "^10.2.0",
+    "selenium-webdriver": "^4.12.0"
   },
   "devDependencies": {
     "@applitools/eyes-playwright": "^1.18.3",
