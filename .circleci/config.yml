@@ -5,4 +5,4 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          command: npx cypress run
+          start-command: npx cypress run
