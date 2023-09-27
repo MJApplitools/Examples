@@ -1,37 +1,8 @@
-# version: 2.1
-# orbs:
-#   cypress: cypress-io/cypress@3
-# workflows:
-#   build:
-#     jobs:
-#       - cypress/run:
-#           start-command: npx cypress run
-version: '2.1'
+version: 2.1
 orbs:
   cypress: cypress-io/cypress@3
-jobs:
-  install-and-persist:
-    executor: cypress/default
-    steps:
-      - cypress/install
-      - persist_to_workspace:
-          paths:
-            - .cache/Cypress
-            - project
-          root: ~/
-  run-tests-in-parallel:
-    executor: cypress/default
-    steps:
-      - attach_workspace:
-          at: ~/
-      - cypress/run-tests:
-          cypress-command: npx cypress run
 workflows:
-  use-my-orb:
+  build:
     jobs:
-      - install-and-persist:
-          name: Install & Persist To Workspace
-      - run-tests-in-parallel:
-          name: Run Tests
-          requires:
-            - Install & Persist To Workspace
+      - cypress/run:
+          start-command: npx cypress run
