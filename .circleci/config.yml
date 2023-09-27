@@ -5,4 +5,7 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          start-command: npx cypress run
+          cypress-cache-key: custom-cypress-cache-v1-{{ arch }}-{{ checksum "package.json" }}
+          cypress-cache-path: ~/.cache/custom-dir/Cypress
+          cypress-command: npx cypress run
+          node-cache-version: v2
