@@ -13,7 +13,7 @@ orbs:
 #       - cypress/run:
 #         start-command: npx cypress run --spec ./cypress/e2e/test-group-2/*.js
 workflows:
-  run_tests:
+  build:
     jobs:
       - cypress/run:
         start-command: npx cypress run --spec ./cypress/e2e/test-group-1/*.js
