@@ -11,9 +11,7 @@ jobs:
       - cypress/run:
         start-command: npx cypress run --spec ./cypress/e2e/test-group-2/*.js
 workflows:
-  build:
+  run_tests:
     jobs:
-      - parallelJobOne:
-        name: Job 1
-      - parallelJobTwo:
-        name: Job 2
+      - parallelJobOne
+      - parallelJobTwo
