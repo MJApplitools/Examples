@@ -1,19 +1,21 @@
 version: 2.1
 orbs:
   cypress: cypress-io/cypress@3
-jobs:
-  parallelJobOne:
-    executor: cypress/default
-    steps:
-      - cypress/run:
-        start-command: npx cypress run --spec ./cypress/e2e/test-group-1/*.js
-  parallelJobTwo:
-    executor: cypress/default
-    steps:
-      - cypress/run:
-        start-command: npx cypress run --spec ./cypress/e2e/test-group-2/*.js
+# jobs:
+#   parallelJobOne:
+#     executor: cypress/default
+#     steps:
+#       - cypress/run:
+#         start-command: npx cypress run --spec ./cypress/e2e/test-group-1/*.js
+#   parallelJobTwo:
+#     executor: cypress/default
+#     steps:
+#       - cypress/run:
+#         start-command: npx cypress run --spec ./cypress/e2e/test-group-2/*.js
 workflows:
   run_tests:
     jobs:
-      - parallelJobOne
-      - parallelJobTwo
+      - cypress/run:
+        start-command: npx cypress run --spec ./cypress/e2e/test-group-1/*.js
+      - cypress/run:
+        start-command: npx cypress run --spec ./cypress/e2e/test-group-2/*.js
