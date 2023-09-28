@@ -2,6 +2,9 @@ name: Cypress Tests
 
 on: push
 
+env:
+  APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
+
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
