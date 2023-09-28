@@ -18,3 +18,4 @@ workflows:
           cypress-command: export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1` && npx cypress run --spec "./cypress/e2e/test-group-2/*.js"
       - close_batch:
           requires: [cypress-run-1, cypress-run-2]
+`
