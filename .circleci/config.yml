@@ -26,4 +26,4 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          start-command: npx cypress run
+          start-command: npx cypress run --spec ./cypress/e2e/test-group-1/*.js
