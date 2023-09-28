@@ -17,7 +17,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          start: npm run test:cypress:parallel:1
+          command: npm run test:cypress:parallel:1
   cypress-job-2:
     runs-on: ubuntu-22.04
     strategy:
@@ -28,4 +28,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          start: npm run test:cypress:parallel:2
+          command: npm run test:cypress:parallel:2
