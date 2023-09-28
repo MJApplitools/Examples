@@ -6,7 +6,7 @@ jobs:
     steps:
       - cypress/run:
         start-command: npx cypress run --spec ./cypress/e2e/test-group-1/*.js
-  parallelJobOne:
+  parallelJobTwo:
     steps:
       - cypress/run:
         start-command: npx cypress run --spec ./cypress/e2e/test-group-2/*.js
