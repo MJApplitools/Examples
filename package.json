@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:cypress:parallel:1": "npx cypress run --spec cypress/e2e/test-group-1/*.js",
-    "test:cypress:parallel:2": "npx cypress run --spec cypress/e2e/test-group-2/*.js"
+    "test:cypress:parallel:1": "npx cypress run --spec 'cypress/e2e/test-group-1/*.js'",
+    "test:cypress:parallel:2": "npx cypress run --spec 'cypress/e2e/test-group-2/*.js'"
   },
   "repository": {
     "type": "git",
