@@ -9,6 +9,8 @@ env:
 jobs:
   cypress-job-1:
     runs-on: ubuntu-22.04
+    strategy:
+      fail-fast: false
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -18,10 +20,12 @@ jobs:
           start: npx cypress run --spec cypress/e2e/test-group-1/*.js
   cypress-job-2:
     runs-on: ubuntu-22.04
+    strategy:
+      fail-fast: false
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          start: npx cypress run --spec cypress/e2e/test-group-2/*.js
+          start: npm run test:cypress:parallel:1
