@@ -3,7 +3,8 @@ orbs:
   cypress: cypress-io/cypress@3
 jobs:
   close_batch:
-    executor: basic
+    docker:
+      - image: cimg/base:stable
     steps:
       - run: echo HELLO WORLD
 workflows:
