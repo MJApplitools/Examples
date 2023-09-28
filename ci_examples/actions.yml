@@ -8,7 +8,7 @@ env:
 
 jobs:
   cypress-job-1:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
     steps:
@@ -19,7 +19,7 @@ jobs:
         with:
           command: npm run test:cypress:parallel:1
   cypress-job-2:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
     steps:
@@ -29,13 +29,3 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           command: npm run test:cypress:parallel:2
-  close_batch:
-    needs: [cypress-job-1, cypress-job-2]
-    # Ensure we close the batch even if our tests fail
-    if: always()
-    runs-on: ubuntu-latest
-    steps:
-      - name: Update Applitools batch status 
-        uses: wei/curl@v1.1.1
-        with:
-          args: -d "" -X POST https://eyesapi.applitools.com/api/externals/github/servers/github.com/commit/${{ env.APPLITOOLS_BATCH_ID }}/complete?apiKey=${{ secrets.APPLITOOLS_API_KEY }}
