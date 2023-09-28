@@ -2,7 +2,7 @@ describe('Functionally Test Login', () => {
     beforeEach(() => {
         cy.eyesOpen({
             appName: 'ACME Bank',
-            testName: 'Bank - Functional Test'
+            testName: 'Visual Functional Test'
         })
     })
 

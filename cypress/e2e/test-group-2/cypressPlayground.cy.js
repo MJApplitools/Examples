@@ -2,7 +2,7 @@ describe('Functionally Test Login', () => {
     beforeEach(() => {
         cy.eyesOpen({
             appName: 'ACME Bank',
-            testName: 'Layout Algo - Dashboard',
+            testName: '3 Browser Test',
             browser: [
                 {width: 1300, height: 1000, name: 'chrome'},
                 {width: 1300, height: 1000, name: 'firefox'},

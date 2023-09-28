@@ -2,7 +2,7 @@ describe('Test Bank App', () => {
     beforeEach(() => {
         cy.eyesOpen({
             appName: 'ACME Bank',
-            testName: 'Bank - Floating Regions Test'
+            testName: 'Floating Regions'
         })
     })
 

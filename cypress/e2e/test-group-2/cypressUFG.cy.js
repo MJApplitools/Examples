@@ -2,7 +2,7 @@ describe('Cypress UFG', () => {
     beforeEach(() => {
         cy.eyesOpen({
             appName: 'ACME Bank',
-            testName: 'Bank - UFG Test',
+            testName: 'Many Browser Test',
             // Tell the UFG which environments to run cross browser tests on
             browser: [
                 {width: 800, height: 600, name: 'firefox'},
