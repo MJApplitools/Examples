@@ -14,9 +14,9 @@ test.describe('ACME Bank', () => {
     test('Test Bank App', async ({ page }) => {
         await page.goto('https://sandbox.applitools.com/bank/dashboard?layoutAlgo=true');
         await eyes.check(
-			Target.window()
-				.layoutRegions('.dashboardOverview_accountBalances__3TUPB', '.dashboardTable_dbTable___R5Du')
-		);
+            Target.window()
+                .layoutRegions('.dashboardOverview_accountBalances__3TUPB', '.dashboardTable_dbTable___R5Du')
+        );
     });
         
     test.afterEach(async () => {
